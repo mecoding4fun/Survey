@@ -12,7 +12,7 @@ class Form{
        this.radio2 = createRadio();
       this.radio2.option('Yes');
       this.radio2.option('No');
-      this.thirdQuestion = createElement('p', "Q2. Would you be willing to contribute a small amount every month for such a program?");
+      this.thirdQuestion = createElement('p', "Q3.  How much per month would you be willing to pay?");
       this.radio3 = createRadio();
      this.radio3.option('100');
      this.radio3.option('500');
