@@ -12,12 +12,13 @@ class Form{
        this.radio2 = createRadio();
       this.radio2.option('Yes');
       this.radio2.option('No');
-      this.thirdQuestion = createElement('p', "Q3.  How much per month would you be willing to pay?");
+      this.thirdQuestion = createElement('p', "Q2. Would you be willing to contribute a small amount every month for such a program?");
       this.radio3 = createRadio();
      this.radio3.option('100');
      this.radio3.option('500');
      this.radio3.option('1000');
      this.radio3.option('More!');
+     this.greeting = createElement('h2','Thank you!!');
       
         this.emailIndex = null;
     }
@@ -33,6 +34,7 @@ class Form{
         this.thirdQuestion.position(50, 400);
         this.radio3.position(45, 450);
         this.submit.position(300,518);
+        this.greeting.position(500,200);
     }
 
     style(){
@@ -62,6 +64,7 @@ class Form{
         this.thirdQuestion.hide();
         this.radio3.hide();
         this.submit.hide();
+        this.greeting.hide();
     }
 
     updateState(){
@@ -87,8 +90,19 @@ class Form{
             this.thirdQuestion.show();
             this.radio3.show();
             this.submit.show();
+        }
+    }
 
+    loadGreeting(){
+        this.submit.mousePressed(()=>{
+            gameState = SHOWGREETING;
+            console.log(gameState)
+        })
+    }
 
+    showGreeting(){
+        if(gameState === SHOWGREETING){
+            this.greeting.show();            
         }
     }
 
