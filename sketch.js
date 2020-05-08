@@ -1,7 +1,7 @@
 var form;
 var START = 0;
 var PLAY = 1;
-var screen2 = 2;
+var SHOWGREETING = 2;
 var gameState = START;
 var database;
 var peopleCount = 1;
@@ -25,6 +25,8 @@ function draw() {
   form.hide();
   form.StartSurvey();
   form.updateCount();
+  form.loadGreeting();
+  form.showGreeting();
   if(peopleCount > 0){
     form.updateEmail()
   }
