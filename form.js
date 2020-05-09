@@ -12,7 +12,7 @@ class Form{
        this.radio2 = createRadio();
       this.radio2.option('Yes');
       this.radio2.option('No');
-      this.thirdQuestion = createElement('p', "Q2. Would you be willing to contribute a small amount every month for such a program?");
+      this.thirdQuestion = createElement('p', "Q3. What number of amount you be willing to contribute for program?");
       this.radio3 = createRadio();
      this.radio3.option('100');
      this.radio3.option('500');
@@ -33,7 +33,7 @@ class Form{
         this.radio2.position(45, 350);
         this.thirdQuestion.position(50, 400);
         this.radio3.position(45, 450);
-        this.submit.position(300,518);
+        this.submit.position(300,650);
         this.greeting.position(500,200);
     }
 
@@ -90,6 +90,7 @@ class Form{
             this.thirdQuestion.show();
             this.radio3.show();
             this.submit.show();
+
         }
     }
 
